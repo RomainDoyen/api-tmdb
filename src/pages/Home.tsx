@@ -1,18 +1,10 @@
 import Header from '../components/ui/Header'
+import { links } from '../routes/routes'
 
 export default function Home(): React.JSX.Element {
   return (
     <div>
-      <Header 
-        to="/" 
-        className={nav => nav.isActive ? "nav-active" : ""} 
-        text="Accueil" 
-      />
-      <Header 
-        to="/likes" 
-        className={nav => nav.isActive ? "nav-active" : ""} 
-        text="Coup de coeur" 
-      />
+      <Header links={links} />
     </div>
   )
 }

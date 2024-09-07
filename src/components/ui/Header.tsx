@@ -1,19 +1,27 @@
 import { NavLink } from 'react-router-dom';
 
-type HeaderProps = {
+type LinkItem = {
   to: string;
   className: string | ((nav: { isActive: boolean }) => string);
   text: string;
 }
 
-export default function Header({ to, className, text }: HeaderProps): React.JSX.Element {
+type HeaderProps = {
+  links: LinkItem[];
+}
+
+export default function Header({ links }: HeaderProps): React.JSX.Element {
   return (
     <header>
       <nav>
         <ul>
-          <li>
-            <NavLink to={to} className={className}>{text}</NavLink>
-          </li>
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink to={link.to} className={link.className}>
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
