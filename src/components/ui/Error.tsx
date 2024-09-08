@@ -1,7 +1,4 @@
-type ErrorProps = {
-  title: string;
-  text: string;
-}
+import { ErrorProps } from "../../types/ui"
 
 export default function Error({ title, text }: ErrorProps): React.JSX.Element {
   return (

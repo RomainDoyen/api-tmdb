@@ -1,9 +1,4 @@
-type InputProps = {
-  type: string;
-  placeholder: string;
-  id: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+import { InputProps } from "../../types/ui"
 
 export default function Input({ type, placeholder, id, onChange }: InputProps): React.JSX.Element {
   return (

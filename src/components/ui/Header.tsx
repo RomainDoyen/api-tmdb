@@ -1,14 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
-type LinkItem = {
-  to: string;
-  className: string | ((nav: { isActive: boolean }) => string);
-  text: string;
-}
-
-type HeaderProps = {
-  links: LinkItem[];
-}
+import { HeaderProps } from '../../types/ui';
 
 export default function Header({ links }: HeaderProps): React.JSX.Element {
   return (

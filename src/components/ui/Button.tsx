@@ -1,12 +1,4 @@
-import { JSX } from "preact/jsx-runtime";
-
-type ButtonProps = {
-  id?: string;
-  className: string;
-  onClick: () => void;
-  text: string;
-  icon?: string | JSX.Element;
-};
+import { ButtonProps } from "../../types/ui"
 
 export default function Button({ id, className, onClick, text, icon }: ButtonProps): React.JSX.Element {
   return (

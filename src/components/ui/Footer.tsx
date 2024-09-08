@@ -1,7 +1,4 @@
-type FooterProps = {
-  nameSite: string;
-  copyright: string;
-}
+import { FooterProps } from "../../types/ui";
 
 export default function Footer({ nameSite, copyright }: FooterProps): React.JSX.Element {
 
