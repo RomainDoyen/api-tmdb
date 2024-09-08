@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2f2c2c;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+}
+
+.form-component {
+  padding: 100px;
+}
+
+.result {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
