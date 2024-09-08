@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { MovieCardProps } from '../../types/movie';
 import { dateFormater, addStorage, deleteStorage } from '../../utils/moviecrd';
 import Button from '../ui/Button';
+import Image from '../ui/Image';
 
 export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element {
 
@@ -78,7 +79,10 @@ export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element
             <ul>
                 <Link to={`/movie/${movie.id}`} className="content-link">
                 <div className="content" key={movie.id}>
-                    <img src={movie.poster_path ? "https://image.tmdb.org/t/p/original/" + movie.poster_path : "./img/poster.jpg"} alt={movie.title} />
+                    <Image 
+                        src={movie.poster_path ? "https://image.tmdb.org/t/p/original/" + movie.poster_path : "./img/poster.jpg"} 
+                        alt={movie.title}
+                    />
                     <div className="content-overlay"></div>
                     <div className="content-details fadeIn-bottom">
                         <h3 className="content-title"><span className="movie-content">Titre:</span> {movie.title}</h3>
