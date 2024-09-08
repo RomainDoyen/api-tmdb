@@ -1,3 +1,5 @@
+import { JSX } from "preact/jsx-runtime";
+
 type ButtonProps = {
   id?: string;
   className: string;

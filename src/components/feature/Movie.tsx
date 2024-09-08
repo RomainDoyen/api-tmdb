@@ -9,13 +9,13 @@ export default function Movie(): React.JSX.Element {
     const [search, setSearch] = useState<string>("code");
     const [sortGoodBad, setSortGoodBad] = useState<"goodToBad" | "badToGood" | null>(null);
 
-    const apiURL = `https://api.themoviedb.org/3/search/movie`;
-    const apiKey = import.meta.env.VITE_API_KEY;
-    const language = "fr-FR";
+    const apiURL: string = `https://api.themoviedb.org/3/search/movie`;
+    const apiKey: string = import.meta.env.VITE_API_KEY;
+    const language: string = "fr-FR";
 
     const recupMovie = async () => {
         try {
-            const response = await fetch(
+            const response: Response = await fetch(
                 `${apiURL}?api_key=${apiKey}&query=${search}&language=${language}`
             );
             if (!response.ok) {

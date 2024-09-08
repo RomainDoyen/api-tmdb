@@ -6,6 +6,8 @@ import Image from '../ui/Image';
 
 export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element {
 
+    const apiImage: string = "https://image.tmdb.org/t/p/original";
+
     const genreFinder = () => {
         let genreArray: string[] = [];
         for (let index = 0; index < movie.genre_ids.length; index++) {
@@ -71,7 +73,11 @@ export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element
                     break;
             }
         }
-        return genreArray.map((genre: string, index: number) => <li key={index}>{genre}</li>);
+        return genreArray.map((genre: string, index: number) => 
+            <li key={index}>
+                {genre}
+            </li>
+        );
     }
 
     return (
@@ -80,7 +86,7 @@ export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element
                 <Link to={`/movie/${movie.id}`} className="content-link">
                 <div className="content" key={movie.id}>
                     <Image 
-                        src={movie.poster_path ? "https://image.tmdb.org/t/p/original/" + movie.poster_path : "./img/poster.jpg"} 
+                        src={movie.poster_path ? apiImage + movie.poster_path : "./img/poster.jpg"} 
                         alt={movie.title}
                     />
                     <div className="content-overlay"></div>
