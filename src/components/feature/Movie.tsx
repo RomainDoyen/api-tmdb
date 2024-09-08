@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
 import type { Movie, ApiResponse } from '../../types/movie';
+import Input from '../ui/Input';
 
 export default function Movie(): React.JSX.Element {
     const [movies, setMovies] = useState<Movie[]>([]);
@@ -50,10 +51,10 @@ export default function Movie(): React.JSX.Element {
         <div className='form-component'>
             <div className="form-container">
                 <form>
-                    <input
-                        type="text"
-                        placeholder='Entrez le titre du film'
-                        id='searchinput'
+                    <Input 
+                        type="text" 
+                        placeholder="Entrez le titre du film" 
+                        id="searchinput" 
                         onChange={handleChange}
                     />
                     {/* <button type='submit'>Rechercher</button> */}
