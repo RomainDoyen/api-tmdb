@@ -3,7 +3,7 @@ type ImageProps = {
   alt: string;
 };
 
-export default function Image({ src, alt }): React.JSX.Element {
+export default function Image({ src, alt }: ImageProps): React.JSX.Element {
   return (
     <img 
       src={src} 

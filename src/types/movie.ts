@@ -7,6 +7,7 @@ export type Movie = {
     genres: Genre[];
     overview: string;
     poster_path: string;
+    backdrop_path: string;
 };
 
 export type Genre = {
