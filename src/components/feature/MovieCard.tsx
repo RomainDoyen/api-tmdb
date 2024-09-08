@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MovieCardProps } from '../../types/movie';
 import { dateFormater, addStorage, deleteStorage } from '../../utils/moviecrd';
+import Button from '../ui/Button';
 
 export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element {
 
@@ -88,12 +89,20 @@ export default function MovieCard ({ movie }: MovieCardProps): React.JSX.Element
                         ))}</p>
                         <p className="content-syn"><span className="movie-content">Synopsis:</span> {movie.overview}</p>
                         {movie.genre_ids ? (
-                            <button className="btn-add" onClick={() => addStorage(movie)}>Ajouter aux coup de coeur</button>
+                            <Button 
+                                className='btn-add'
+                                onClick={() => addStorage(movie)}
+                                text='Ajouter aux coup de coeur'
+                            />
                         ):(
-                            <button className="btn-del" onClick={() => {
-                                deleteStorage(movie);
-                                window.location.reload();
-                            }}>Supprimer ce coup de coeur</button>
+                            <Button 
+                                className='btn-del'
+                                onClick={() => {
+                                    deleteStorage(movie);
+                                    window.location.reload();
+                                }}
+                                text='Supprimer ce coup de coeur'
+                            />
                         )}
                     </div>
                 </div>

@@ -5,7 +5,7 @@ type InputProps = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function Input({ type, placeholder, id, onChange }): React.JSX.Element {
+export default function Input({ type, placeholder, id, onChange }: InputProps): React.JSX.Element {
   return (
     <input
       type={type}

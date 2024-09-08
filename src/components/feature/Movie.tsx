@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
 import type { Movie, ApiResponse } from '../../types/movie';
 import Input from '../ui/Input';
+import Button from '../ui/Button';
 
 export default function Movie(): React.JSX.Element {
     const [movies, setMovies] = useState<Movie[]>([]);
@@ -60,20 +61,20 @@ export default function Movie(): React.JSX.Element {
                     {/* <button type='submit'>Rechercher</button> */}
                 </form>
                 <div className="btn-sort-container">
-                    <button
-                        className='btn-sort'
+                    <Button 
                         id='goodToBad'
-                        onClick={() => setSortGoodBad("goodToBad")}
-                    >
-                        Top <span role='img' aria-label='arrow'><i className="fa-solid fa-arrow-up"></i></span>
-                    </button>
-                    <button
                         className='btn-sort'
+                        onClick={() => setSortGoodBad("goodToBad")}
+                        text='Top'
+                        icon={<i className="fa-solid fa-arrow-up"></i>}
+                    />
+                    <Button 
                         id='badToGood'
+                        className='btn-sort'
                         onClick={() => setSortGoodBad("badToGood")}
-                    >
-                        Flop <span role='img' aria-label='arrow'><i className="fa-solid fa-arrow-down"></i></span>
-                    </button>
+                        text='Flop'
+                        icon={<i className="fa-solid fa-arrow-down"></i>}
+                    />
                 </div>
             </div>
             <div className="result">
