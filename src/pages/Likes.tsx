@@ -40,7 +40,7 @@ export default function Likes (): React.JSX.Element {
     }, []);
 
     return (
-        <div>
+        <>
             <Header links={links} />
             <div className="form-component">
                 <div className="result">
@@ -60,6 +60,6 @@ export default function Likes (): React.JSX.Element {
                 nameSite="API TMDB" 
                 copyright="Tous droits réservés" 
             />
-        </div>
+        </>
     );
 };

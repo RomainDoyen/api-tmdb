@@ -5,13 +5,13 @@ import { links } from '../routes/routes'
 
 export default function Home(): React.JSX.Element {
   return (
-    <div>
+    <>
       <Header links={links} />
       <Movie />
       <Footer 
         nameSite="API TMDB" 
         copyright="Tous droits réservés" 
       />
-    </div>
+    </>
   )
 }

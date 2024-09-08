@@ -38,7 +38,7 @@ export default function MovieDetail (): React.JSX.Element {
     }, []);
 
   return (
-    <div>
+    <>
         <Header links={links} />
         <div className="content-detail">
             <Image 
@@ -67,6 +67,6 @@ export default function MovieDetail (): React.JSX.Element {
             nameSite="API TMDB" 
             copyright="Tous droits réservés" 
         />
-    </div>
+    </>
   );
 };
