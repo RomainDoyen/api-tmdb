@@ -1,0 +1,125 @@
+.content {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
+}
+
+span.movie-content {
+    color: #84a9fb;
+    font-weight: 700;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content:hover .content-details {
+    opacity: 1;
+}
+
+.content-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgb(192, 190, 197);
+}
+
+.content-date,
+.content-rating,
+.content-syn {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.content-syn {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-genre li {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgb(192, 190, 197);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-add {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+}
+
+.btn-del {
+    cursor: pointer;
+    background-color: #e13922;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.btn-del:hover {
+    background-color: #c4331f;
+}
+
+/*@media (max-width: 768px) {
+    .content {
+      width: calc(50% - 20px);
+    }
+}*/
