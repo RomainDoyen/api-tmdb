@@ -1,0 +1,40 @@
+.content-detail {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-film {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+span.detail {
+    color: #84a9fb;
+    font-weight: 700;
+}
+
+.content-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.movie-detail {
+    padding: 20px;
+}
+
+.movie-poster {
+    width: 700px;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.movie-syn {
+    background-color: rgb(63, 63, 63);
+    border-radius: 10px;
+    padding: 20px;
+}
